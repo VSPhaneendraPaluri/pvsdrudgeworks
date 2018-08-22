@@ -1,0 +1,16 @@
+find . -name "*.__i" -print0 | xargs -0 rm -rf
+find . -name "*.axf" -print0 | xargs -0 rm -rf
+find . -name "*.Bak" -print0 | xargs -0 rm -rf
+find . -name "*.crf" -print0 | xargs -0 rm -rf
+find . -name "*.d" -print0 | xargs -0 rm -rf
+find . -name "*.dep" -print0 | xargs -0 rm -rf
+find . -name "*.o" -print0 | xargs -0 rm -rf
+find . -name "*.hex" -print0 | xargs -0 rm -rf
+find . -name "*.htm" -print0 | xargs -0 rm -rf
+find . -name "*.lnp" -print0 | xargs -0 rm -rf
+find . -name "*.lst" -print0 | xargs -0 rm -rf
+find . -name "*.map" -print0 | xargs -0 rm -rf
+find . -name "*.Opt" -print0 | xargs -0 rm -rf
+find . -name "*.Opt.Bak" -print0 | xargs -0 rm -rf
+find . -name "*.plg" -print0 | xargs -0 rm -rf
+find . -name "*.tra" -print0 | xargs -0 rm -rf
