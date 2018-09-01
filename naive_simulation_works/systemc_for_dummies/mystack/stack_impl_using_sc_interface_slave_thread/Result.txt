@@ -1,0 +1,72 @@
+
+Integer value received from Master_IF : 0
+At time : 0 s	Master->Pushed : 0
+
+Interger value transmitted to Slave_IF : 0at time stamp :0 s
+
+Stack is empty.  You cannot pop anymore elements.
+
+Integer value received from Master_IF : 1
+At time : 5 ns	Master->Pushed : 1
+
+Interger value transmitted to Slave_IF : 1at time stamp :10 ns
+
+Integer value received from Master_IF : 2
+At time : 10 ns	Master->Pushed : 2
+
+Interger value transmitted to Slave_IF : 2at time stamp :15 ns
+
+Integer value received from Master_IF : 3
+At time : 15 ns	Master->Pushed : 3
+
+Interger value transmitted to Slave_IF : 3at time stamp :20 ns
+
+Integer value received from Master_IF : 4
+At time : 20 ns	Master->Pushed : 4
+
+Interger value transmitted to Slave_IF : 4at time stamp :25 ns
+
+Integer value received from Master_IF : 5
+At time : 25 ns	Master->Pushed : 5
+
+Interger value transmitted to Slave_IF : 5at time stamp :30 ns
+
+Integer value received from Master_IF : 6
+At time : 30 ns	Master->Pushed : 6
+
+Interger value transmitted to Slave_IF : 6at time stamp :35 ns
+
+Integer value received from Master_IF : 7
+At time : 35 ns	Master->Pushed : 7
+
+Interger value transmitted to Slave_IF : 7at time stamp :40 ns
+
+Integer value received from Master_IF : 8
+At time : 40 ns	Master->Pushed : 8
+
+Interger value transmitted to Slave_IF : 8at time stamp :45 ns
+
+Integer value received from Master_IF : 9
+At time : 45 ns	Master->Pushed : 9
+
+Interger value transmitted to Slave_IF : 9at time stamp :50 ns
+At time : 50 ns	Master->Pushed : 9
+
+Stack is empty.  You cannot pop anymore elements.
+At time : 55 ns	Master->Pushed : 9
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
+
+Stack is empty.  You cannot pop anymore elements.
