@@ -23,7 +23,7 @@ nuget {
 
       This AUTOPKG has been created using Microsoft's CoApp tool.
       NOTE : CoApp project is developed and maintained under the APACHE LICENSE, 2.0
-      "http://www.apache.org/licenses/LICENSE-2.0.html"
+      'http://www.apache.org/licenses/LICENSE-2.0.html'
 
       The intent is to make the necessary build artifacts available for the SystemC developer(s).
       This would allow users to directly download the Nuget Extension package and use them within their project builds.
