@@ -1,0 +1,93 @@
+#defines {
+  AUTHOR_NAME = Pvs;
+  PACKAGE_TYPE = SoftTools;
+  SERVICE_NAME = SystemC;
+  PACKAGE_VERSION = 0.1;
+  SYSTEMC_INSTALLATION_RELATIVE_PATH = ..\; // Update this to point to SystemC ROOT directory
+}
+
+nuget {
+
+  nuspec {
+    id = ${AUTHOR_NAME}.${PACKAGE_TYPE}.${SERVICE_NAME};
+    version : ${PACKAGE_VERSION};
+    title : SystemC Artifacts NuGet Package;
+    authors : P V S Phaneendra;
+    owners : P V S Phaneendra;
+    licenseUrl : "https://github.com/VSPhaneendraPaluri/pvsdrudgeworks/blob/master/LICENSE";
+    projectUrl : "https://github.com/VSPhaneendraPaluri";
+    iconUrl : "https://github.com/identicons/VSPhaneendraPaluri.png";
+    requireAcceptanceLicence : false;
+    summary : SystemC Nuget Package prepared using CoApp;
+    description : @"Detailed summary is mentinoed below:
+
+      This AUTOPKG has been created using Microsoft's CoApp tool.
+      NOTE : CoApp project is developed and maintained under the APACHE LICENSE, 2.0
+      "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+      The intent is to make the necessary build artifacts available for the SystemC developer(s).
+      This would allow users to directly download the Nuget Extension package and use them within their project builds.
+
+      TODO LIST :
+      1. Extend the package builder to deploy build artifacts for a varied combinations of the build factors.
+      2. Have a TestApp that can be configured for all possible combinations of the build factors for validation of the package.
+      3. Generate property sheet in order to allow
+         a. automatic inclusion of the Include(s) to the 'AdditionalIncludeDirectories' [Status - Completed]
+         b. automatic linkage of the Libraries to the 'AdditionalDependencies' [Status - WIP]
+         c. automatic inclusion of the Define(s) to the 'PreprocessorDefinitions' [Status - WIP]
+
+      NOTE :
+        Curretly - for Windows Users - after installing this NuGet Package - user(s) would need
+        to manually add the libaries path and link the appropriate libraries.
+    ";
+    releaseNotes : "Public Release of SystemC NuGet installer";
+    copyright : Copyright 2018;
+    tags : {SystemC, Accellera, Native, Nuget Package};
+  };
+
+  files {
+ 
+    #defines {
+      SYSTEMC_BUILD_RELATIVE_PATH = ${SYSTEMC_INSTALLATION_RELATIVE_PATH}\systemc-2.3.2\msvc10\SystemC;
+      SYSTEMC_DOCS_RELATIVE_PATH = ${SYSTEMC_INSTALLATION_RELATIVE_PATH}\systemc-2.3.2\docs;
+      SYSTEMC_SOURCE_RELATIVE_PATH = ${SYSTEMC_INSTALLATION_RELATIVE_PATH}\systemc-2.3.2\src;
+    }
+
+    // Include files list (glob)
+    nestedInclude : {
+      #destination = ${d_include};
+      "${SYSTEMC_SOURCE_RELATIVE_PATH}\**\*"
+    };
+
+    // Documentation file(s)/folder(s)
+    docs : {
+      "..\..\LICENSE.rtf",
+      ${SYSTEMC_DOCS_RELATIVE_PATH}\**\*.pdf,
+      ${SYSTEMC_DOCS_RELATIVE_PATH}\**\*.ppt,     
+    };
+
+    // Defining the 'Pivots' for the package(s) - $(Platform), $(PlatformToolset), $(Configuration)
+    // Declaring 'lib', 'symbols' and 'bin' directory content(s)
+    [x86,v100,Debug] {
+      lib : ${SYSTEMC_BUILD_RELATIVE_PATH}\Debug\**.lib;
+      symbols : ${SYSTEMC_BUILD_RELATIVE_PATH}\Debug\SystemC.pdb;
+      bin : "";
+    }
+
+    [x64,v100,Debug] {
+      lib : ${SYSTEMC_BUILD_RELATIVE_PATH}\x64\Debug\**.lib;
+      symbols : ${SYSTEMC_BUILD_RELATIVE_PATH}\x64\Debug\SystemC.pdb;
+      bin : "";
+    }
+  };
+
+  targets {
+    Include += ${d_include};
+    Defines += HAS_SYSTEMC;
+    [Release]
+    Defines += HAS_SYSTEMC;
+  }
+
+  props {
+  }
+}
